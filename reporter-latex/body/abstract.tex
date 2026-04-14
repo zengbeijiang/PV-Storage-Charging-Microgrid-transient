@@ -1,12 +1,23 @@
 \begin{abstract}
-	这里写您论文的中文摘要部分。
+随着新能源发电与电动汽车的快速发展，光储充电站微电网成为了解决充电负荷激增与新能源就地消纳的重要途径。本文以并网型光储充微电网为研究对象，从底层的设备数学建模、电磁暂态控制到上层的日前经济调度展开了系统性研究。
 
-	\keywords{中文关键词}
+首先，建立了微电网核心组件的数学模型与控制策略。针对光伏阵列与储能系统（Energy Storage System, ESS），分别设计了最大功率点跟踪（MPPT）控制与双闭环控制；针对直流充电桩等恒功率负荷（Constant Power Load, CPL），在深入剖析其负阻抗特性的基础上，提出了一种受控电流源结合欠压锁定（UVLO）饱和保护的降阶等效建模方法，有效解决了高频开关级模型带来的维度灾难与仿真发散问题。
+
+其次，在 Simulink 平台搭建了微电网系统电磁暂态仿真模型，验证了底层控制系统在面临光照突变、负荷阶跃等内部扰动时的动态响应能力。同时，针对电网三相短路故障等外部极端工况，分析了逆变器的低电压穿越（LVRT）与限流保护机制，证明了系统在复杂暂态过程中的物理鲁棒性。
+
+最后，在宏观时间尺度上，提出了一种基于粒子群优化（Particle Swarm Optimization, PSO）算法的微电网日前经济调度策略。该策略以系统综合运行成本最小化为目标，综合考虑了分时电价套利、基于安时积分的电池寿命衰减成本及各项物理功率边界。仿真结果表明，所提调度策略能够有效应对源荷不确定性并实现削峰填谷，在严格保障电池荷电状态（SOC）闭环与健康寿命的前提下，显著提升了系统的整体经济效益。
+
+\keywords{光储充微电网；恒功率负荷；电磁暂态分析；经济调度；粒子群优化算法}
 \end{abstract}
 
 \begin{enabstract}
-	Write the English abstract of your paper here.
-	这里写您论文的英文摘要部分。
+With the rapid development of renewable energy and electric vehicles (EVs), the photovoltaic-storage-charging (PV-storage-charging) microgrid has become a crucial approach to addressing the surge in charging loads and local consumption of renewable energy. This thesis focuses on a grid-tied PV-storage-charging microgrid, conducting a systematic study from bottom-level mathematical modeling and electromagnetic transient control to top-level day-ahead economic dispatch.
 
-	\enkeywords{English keywords, 英文关键词}
+First, the mathematical models and control strategies of the core components are established. For the PV array and Energy Storage System (ESS), Maximum Power Point Tracking (MPPT) control and dual-loop control are designed, respectively. For Constant Power Loads (CPL) such as DC charging stations, based on an in-depth analysis of their negative impedance characteristics, a reduced-order equivalent modeling method combining a controlled current source with Undervoltage Lockout (UVLO) saturation protection is proposed. This method effectively avoids the dimensionality curse and simulation divergence caused by high-frequency switching-level models.
+
+Second, an electromagnetic transient simulation model of the microgrid system is built on the Simulink platform. The dynamic response capabilities of the bottom-level control system under internal disturbances, such as solar irradiance mutations and load steps, are verified. Furthermore, regarding external extreme conditions like three-phase grid short-circuit faults, the Low Voltage Ride-Through (LVRT) and current-limiting protection mechanisms of the inverter are analyzed, proving the physical robustness of the system during transient processes.
+
+Finally, on a macroscopic time scale, a day-ahead economic dispatch strategy based on the Particle Swarm Optimization (PSO) algorithm is proposed. With the objective of minimizing the comprehensive operating cost, this strategy comprehensively considers time-of-use (TOU) pricing arbitrage, battery capacity degradation cost based on Ah-throughput, and physical power boundaries. Simulation results demonstrate that the proposed strategy can effectively handle source-load uncertainties and achieve peak shaving. Under the premise of strictly ensuring the closed-loop State of Charge (SOC) and the healthy lifespan of the battery, the overall economic efficiency of the system is significantly improved.
+
+\enkeywords{PV-storage-charging microgrid; Constant Power Load (CPL); Electromagnetic transient analysis; Economic dispatch; Particle Swarm Optimization (PSO)}
 \end{enabstract}

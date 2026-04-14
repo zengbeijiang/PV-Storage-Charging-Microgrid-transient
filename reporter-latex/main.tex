@@ -7,7 +7,7 @@
 \author{曾北江}	%您的姓名
 \supervisor{熊和金}	%您的指导老师
 
-\bibliography{ref}	%载入参考文献文件
+\addbibresource{ref.bib}	%载入参考文献文件
 
 \begin{document}
 
@@ -20,6 +20,10 @@
 \include{body/chapter1}
 \include{body/chapter2}
 \include{body/chapter3} 
+\include{body/chapter4}
+\include{body/chapter5}
+
+\nocite{*} % 强制将 ref.bib 中的所有文献打印出来，无论正文是否引用
 \printbibliography	%打印参考文献列表
 
 \include{body/acknowledgement}
